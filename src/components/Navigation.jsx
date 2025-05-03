@@ -45,6 +45,14 @@ const StyledNavLink = styled(NavLink)`
     opacity: 1;
     background-color:rgba(255, 255, 255, 0.14);
   }
+
+   @media (max-width: 768px) {
+    flex-direction: column; /* Passe en colonne sur les petits écrans */
+    flex: 1;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    padding: 10px 0; /* Ajuste le padding pour les mobiles */
+  }
 `;
 
 function Navigation() {
