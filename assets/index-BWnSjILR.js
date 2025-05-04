@@ -224,6 +224,8 @@ Error generating stack: `+s.message+`
   width: 90%;
   max-width: 500px;
   position: relative;
+
+  h2 {color: #333; text-align: center;}
 `,Iy=se.button`
   position: absolute;
   top: 10px;
@@ -234,7 +236,9 @@ Error generating stack: `+s.message+`
   cursor: pointer;
   color: #666;
 `,jo=se.div`
-  margin-bottom: 15px;
+    && {
+        margin-bottom: 30px;
+    }
 `,Ro=se.label`
   display: block;
   margin-bottom: 5px;
@@ -243,13 +247,11 @@ Error generating stack: `+s.message+`
 `,cu=se.input`
   width: 100%;
   padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 2px solid #000;
 `,Fy=se.textarea`
   width: 100%;
   padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 2px solid #000;
   min-height: 80px;
   resize: vertical;
 `,Wy=se.div`
@@ -261,18 +263,20 @@ Error generating stack: `+s.message+`
     gap: 0;
   }
 `,$y=se.button`
-  background-color: #4caf50;
-  color: white;
+  background-color: #1906ffaa;
+  color: #fff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  margin-top: 20px;
+  border-radius: 0.3rem;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 10px;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #45a049;
+    background: black;
+    color:  white;
+    
   }
 `,Ay=({showModal:r,onClose:o,onSubmit:l,onInputChange:u,newEvent:c,editingEvent:d})=>r?F.jsx(zy,{children:F.jsxs(Ly,{children:[F.jsx("h2",{children:d?"Modifier l'événement":"Ajouter un événement"}),F.jsx(Iy,{onClick:o,children:"×"}),F.jsxs("form",{onSubmit:l,children:[F.jsxs(jo,{children:[F.jsx(Ro,{children:"Titre"}),F.jsx(cu,{type:"text",name:"title",value:c.title,onChange:u,required:!0})]}),F.jsxs(jo,{children:[F.jsx(Ro,{children:"Description"}),F.jsx(Fy,{name:"description",value:c.description,onChange:u})]}),F.jsxs(Wy,{children:[F.jsxs(jo,{children:[F.jsx(Ro,{children:"Date"}),F.jsx(cu,{type:"date",name:"date",value:c.date,onChange:u,required:!0})]}),F.jsxs(jo,{children:[F.jsx(Ro,{children:"Heure"}),F.jsx(cu,{type:"time",name:"time",value:c.time,onChange:u,required:!0})]})]}),F.jsx($y,{type:"submit",children:d?"Mettre à jour":"Ajouter"})]})]})}):null,Uy=se.div`
   * {
