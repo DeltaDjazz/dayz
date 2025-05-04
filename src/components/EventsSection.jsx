@@ -37,7 +37,9 @@ const EventsGrid = styled.div`
 
 
 
+
 const EventsSection = ({ events, title, colorTheme, onEdit, onDelete }) => {
+
   const theme = colorThemes[colorTheme]; // Récupérer les styles du thème
 
   return (
@@ -55,6 +57,7 @@ const EventsSection = ({ events, title, colorTheme, onEdit, onDelete }) => {
                     onDelete={onDelete}
                     />
                 ))}
+
             </EventsGrid>
         </SectionContainer>
     </ThemeProvider>

@@ -5,6 +5,7 @@ import AddEventButton from '../components/ButtonPrimary';
 import EventsSection from '../components/EventsSection';
 import EventModal from '../components/EventModal';
 
+
 // Styles globaux avec styled-components
 const GlobalStyles = styled.div`
   * {
@@ -148,7 +149,6 @@ function Upcoming() {
         </AppHeader>
 
         <EventsContainer>
-          
           {/* Événements des 7 prochains jours */}
           {upcomingWeekEvents.length > 0 && (
             <EventsSection
@@ -191,7 +191,6 @@ function Upcoming() {
           newEvent={newEvent}
           editingEvent={editingEvent}
         />
-
       </AppContainer>
     </GlobalStyles>
   );
