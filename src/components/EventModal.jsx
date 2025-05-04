@@ -7,7 +7,7 @@ const ModalOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,25 +15,27 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContainer = styled.div`
-  background: white;
+  color: #fff;
+  background:linear-gradient(to bottom, #E05DF2, #5959C1);
+  border: 1px solid #6C6A6D;
   padding: 25px;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 90%;
   max-width: 500px;
   position: relative;
 
-  h2 {color: #333; text-align: center;}
+  h2 {font-size:20px; color: #fff; text-align: center;}
 `;
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 10px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
-  color: #666;
+  color: #fff;
 `;
 
 const FormGroup = styled.div`
@@ -45,21 +47,25 @@ const FormGroup = styled.div`
 const FormLabel = styled.label`
   display: block;
   margin-bottom: 5px;
-  font-weight: 500;
-  color: #333;
+  font-weight: bold;
+  color: #fff;
 `;
 
 const FormInput = styled.input`
   width: 100%;
   padding: 8px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 6px;
 `;
 
 const FormTextarea = styled.textarea`
+  background-color: #fff; 
   width: 100%;
   padding: 8px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   min-height: 80px;
+  border-radius: 6px;
   resize: vertical;
 `;
 
@@ -74,7 +80,8 @@ const FormRow = styled.div`
 `;
 
 const SubmitButton = styled.button`
-  background-color: #1906ffaa;
+  background-color: #00c68eab;
+  width: 100%;
   color: #fff;
   border: none;
   padding: 8px 14px;
@@ -82,10 +89,11 @@ const SubmitButton = styled.button`
   border-radius: 0.3rem;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
   transition: background-color 0.3s;
 
   &:hover {
-    background: black;
+    background: #47c600;
     color:  white;
     
   }

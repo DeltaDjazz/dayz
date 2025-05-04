@@ -23,6 +23,7 @@ const CardHeader = styled.div`
     && {
         padding: 8px 15px;
         position: relative;
+        border-radius: 8px 8px 0 0;
         border-bottom: 1px solid #ddd;
         background-color: ${(props) => props.theme.cardHeader};
     }
@@ -74,7 +75,7 @@ const DropdownButton = styled.button`
   align-items: center;
   gap: 10px; 
   width: 100%;
-  padding: 8px 12px;
+  padding: 10px 12px;
   text-align: left;
   background: none;
   border: none;
@@ -147,6 +148,7 @@ const EventCardComponent = ({ event, colorTheme, onEdit, onDelete }) => {
                       <FaEdit style={{ color: '#aaa' }} />
                       Modifier
                     </DropdownButton>
+                    <hr style={{ color: '#fff'}} />
                     <DropdownButton onClick={handleDelete}>
                       <FaTrash style={{ color: '#aaa' }} />
                       Supprimer

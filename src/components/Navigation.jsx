@@ -18,8 +18,8 @@ const NavBar = styled.nav`
 `;
 
 const LogoImg = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 `;
 
 const LogoTitle = styled.span`
@@ -28,6 +28,10 @@ const LogoTitle = styled.span`
   font-weight: bold;
   padding: 10px;
   margin: 0;
+
+  @media (max-width: 768px) {
+    padding:4px;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -47,7 +51,7 @@ const StyledNavLink = styled(NavLink)`
   }
 
    @media (max-width: 768px) {
-    flex-direction: column; /* Passe en colonne sur les petits écrans */
+    
     flex: 1;
     justify-content: center; /* Centre les éléments verticalement */
     align-items: center; /* Centre les éléments horizontalement */
@@ -58,13 +62,13 @@ const StyledNavLink = styled(NavLink)`
 function Navigation() {
   return (
     <NavBar>
-      <StyledNavLink to="/today-list" end>
-        <LogoImg src={logoToday} alt="Today" />
-        <LogoTitle>Today-List</LogoTitle>
-      </StyledNavLink>
       <StyledNavLink to="/upcoming">
         <LogoImg src={logoUpcoming} alt="Upcoming" />
-        <LogoTitle>Upcoming</LogoTitle>
+        <LogoTitle>Événements</LogoTitle>
+      </StyledNavLink>
+      <StyledNavLink to="/today-list" end>
+        <LogoImg src={logoToday} alt="Today" />
+        <LogoTitle>Liste du jour</LogoTitle>
       </StyledNavLink>
     </NavBar>
   );

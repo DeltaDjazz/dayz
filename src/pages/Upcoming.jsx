@@ -113,12 +113,15 @@ function Upcoming() {
   };
 
   const openNewEventModal = () => {
+    const now = new Date();
+    now.setHours(now.getHours() + 2, 0, 0, 0); // Ajoute 2 heures et met les minutes à 0
+
     setEditingEvent(null);
     setNewEvent({
       title: '',
       description: '',
-      date: format(new Date(), 'yyyy-MM-dd'),
-      time: '09:00'
+      date: format(now, 'yyyy-MM-dd'),
+      time: format(now, 'HH:mm') // Définit l'heure à l'heure actuelle + 2 heures
     });
     setShowModal(true);
   };
@@ -179,6 +182,12 @@ function Upcoming() {
               onEdit={handleEdit}
               onDelete={handleDelete}
             />
+          )}
+
+          {events.length === 0 && (
+            <p style={{ textAlign: 'center', marginTop: '20px', color: '#fff', border: '1px solid #fff5', padding: '20px', borderRadius: '5px' }}>
+              Aucun événement pour le moment. Vous pouvez ajouter des événements futurs avec des dates et heures, et ils s'afficheront ici.
+            </p>
           )}
         </EventsContainer>
 
