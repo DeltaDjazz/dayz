@@ -35,12 +35,11 @@ const EventsGrid = styled.div`
   }
 `;
 
-const EmptyMessage = styled.p`
-  color: #fff;
-  font-style: italic;
-`;
 
-const EventsSection = ({ events, title, emptyMessage, colorTheme, onEdit, onDelete }) => {
+
+
+const EventsSection = ({ events, title, colorTheme, onEdit, onDelete }) => {
+
   const theme = colorThemes[colorTheme]; // Récupérer les styles du thème
 
   return (
@@ -48,7 +47,7 @@ const EventsSection = ({ events, title, emptyMessage, colorTheme, onEdit, onDele
         <SectionContainer>
             <SectionTitle >{title}</SectionTitle>
             <EventsGrid>
-                {events.length > 0 ? (
+                {
                 events.map((event) => (
                     <EventCardComponent
                     key={event.id}
@@ -57,10 +56,8 @@ const EventsSection = ({ events, title, emptyMessage, colorTheme, onEdit, onDele
                     onEdit={onEdit}
                     onDelete={onDelete}
                     />
-                ))
-                ) : (
-                <EmptyMessage>{emptyMessage}</EmptyMessage>
-                )}
+                ))}
+
             </EventsGrid>
         </SectionContainer>
     </ThemeProvider>

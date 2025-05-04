@@ -10,14 +10,12 @@ const EventCard = styled.div`
   border: 1px solid #cbdff2;
   border-left: 5px solid ${(props) => props.theme.borderLeftColor};
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   background-color: ${(props) => props.theme.backgroundColor};
   color: black;
 
   &:hover {
-    
   }
 `;
 
