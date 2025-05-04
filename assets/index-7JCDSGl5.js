@@ -225,7 +225,7 @@ Error generating stack: `+s.message+`
   max-width: 500px;
   position: relative;
 
-  h2 {color: #333; text-align: center;}
+  h2 {font-size:20px; color: #333; text-align: center;}
 `,Iy=se.button`
   position: absolute;
   top: 10px;
