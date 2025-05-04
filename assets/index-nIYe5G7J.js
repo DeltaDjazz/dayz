@@ -237,7 +237,7 @@ Error generating stack: `+s.message+`
   color: #666;
 `,jo=se.div`
     && {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 `,Ro=se.label`
   display: block;
@@ -247,11 +247,11 @@ Error generating stack: `+s.message+`
 `,cu=se.input`
   width: 100%;
   padding: 8px;
-  border: 2px solid #000;
+  border: 1px solid #000;
 `,Fy=se.textarea`
   width: 100%;
   padding: 8px;
-  border: 2px solid #000;
+  border: 1px solid #000;
   min-height: 80px;
   resize: vertical;
 `,Wy=se.div`
