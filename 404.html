@@ -1,19 +1,11 @@
+html
+
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Redirection</title>
-  <script>
-    const segment = 1; // Ajustez ceci selon votre structure d'URL
-    const l = window.location;
-    l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1 + segment).join('/') + '/#' + 
-      l.pathname.split('/').slice(1 + segment).join('/')
-    );
-  </script>
+  <meta http-equiv="refresh" content="0; url=./index.html" />
 </head>
 <body>
-  <h1>Redirection en cours...</h1>
+  <p>Redirection en cours...</p>
 </body>
 </html>
